@@ -1,0 +1,14 @@
+.cardlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .card {
+    width: 31%;
+    background: $color-2;
+    margin: 0 0.5rem;
+
+    .button-group {
+      display: flex;
+    }
+  }
+}

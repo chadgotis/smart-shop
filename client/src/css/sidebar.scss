@@ -1,0 +1,11 @@
+.sidebar {
+  min-width: 200px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+
+  .popular {
+    padding: 0.5rem;
+    background: $color-2;
+    border-radius: 6px;
+  }
+}

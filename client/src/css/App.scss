@@ -1,0 +1,14 @@
+@import "./colors.scss";
+.container {
+  max-width: 1024px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0.5rem;
+}
+@import "./nav.scss";
+@import "./sidebar.scss";
+@import "./main-content.scss";
+@import "./cardlist.scss";
+@import "./dish.scss";
