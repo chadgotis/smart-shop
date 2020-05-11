@@ -17,9 +17,9 @@ function Dish({ dish, incrementCartHandler, decrementCartHandler }) {
                 Add to Cart
               </button>
             ) : (
-              <div className="action-tbn">
+              <div className="action-btn">
                 <button onClick={() => incrementCartHandler(dish.id)}>+</button>
-                {dish.cart}
+                <p>{dish.cart}</p>
                 <button onClick={() => decrementCartHandler(dish.id)}>-</button>
               </div>
             )}

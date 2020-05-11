@@ -42,6 +42,17 @@
           font-weight: bold;
           cursor: pointer;
         }
+        .action-btn {
+          display: flex;
+          p {
+            width: 80px;
+            font-size: 1rem;
+          }
+          button {
+            font-size: 1rem;
+            padding: 0rem;
+          }
+        }
       }
     }
   }
