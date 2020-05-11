@@ -1,11 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+require("dotenv").config();
 
 const dishes = require("./routes/api/Dishes");
 
+const uri = process.env.URI;
 mongoose
-  .connect("mongodb://localhost/shop", {
+  .connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -19,6 +21,6 @@ app.use(bodyParser.json());
 // dishes route
 app.use("/api/dishes", dishes);
 
-const PORT = 5000;
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => console.log(`connection established at port ${PORT}`));
