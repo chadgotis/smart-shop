@@ -1,7 +1,14 @@
 import React from "react";
 import asd from "../assets/burger.jpeg";
+import {
+  incrementOrder,
+  decrementOrder,
+} from "../redux/actions/dishButtonActions";
+import { useDispatch } from "react-redux";
 
-function Dish({ dish, incrementCartHandler, decrementCartHandler }) {
+function Dish({ dish }) {
+  const dispatch = useDispatch();
+
   return (
     <div className="dish-container">
       <div className="dish">
@@ -13,14 +20,18 @@ function Dish({ dish, incrementCartHandler, decrementCartHandler }) {
           <p>P{dish.price}.00</p>
           <div className="button-center">
             {dish.cart === 0 ? (
-              <button onClick={() => incrementCartHandler(dish.id)}>
+              <button onClick={() => dispatch(incrementOrder(dish.id))}>
                 Add to Cart
               </button>
             ) : (
               <div className="action-btn">
-                <button onClick={() => incrementCartHandler(dish.id)}>+</button>
+                <button onClick={() => dispatch(incrementOrder(dish.id))}>
+                  +
+                </button>
                 <p>{dish.cart}</p>
-                <button onClick={() => decrementCartHandler(dish.id)}>-</button>
+                <button onClick={() => dispatch(decrementOrder(dish.id))}>
+                  -
+                </button>
               </div>
             )}
           </div>
