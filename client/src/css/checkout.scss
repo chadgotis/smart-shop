@@ -1,0 +1,12 @@
+.checkout {
+  position: absolute;
+  width: 200px;
+  min-height: 100px;
+  background: $color-2;
+  top: 48px;
+  right: 0;
+  transition: 1s ease-in;
+  z-index: 5;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
