@@ -1,12 +1,40 @@
 .checkout {
   position: absolute;
   width: 200px;
-  min-height: 100px;
+  min-height: 50px;
+  max-height: 400px;
+  visibility: auto;
   background: $color-2;
   top: 48px;
   right: 0;
-  transition: 1s ease-in;
+  // transition: 1s ease-in;
   z-index: 5;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
+  padding: 0.5rem;
+
+  h3 {
+    text-align: center;
+  }
+
+  .no-item {
+    text-align: center;
+    margin-top: 0.3rem;
+  }
+  .item {
+    margin-top: 0.3rem;
+    display: flex;
+    flex: 1;
+    margin-bottom: 0.5rem;
+
+    h4 {
+      flex: 2;
+    }
+    p {
+      flex: 1;
+    }
+  }
+}
+.hr {
+  border: 1px solid black;
 }

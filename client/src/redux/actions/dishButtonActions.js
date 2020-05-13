@@ -11,3 +11,8 @@ export const decrementOrder = (id) => {
     payload: id,
   };
 };
+export const resetCheckout = () => {
+  return {
+    type: "RESET",
+  };
+};

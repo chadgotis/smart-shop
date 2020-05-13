@@ -48,6 +48,8 @@ const dishReducer = (state = initialState, action) => {
       return state.map((dish) =>
         dish.id === action.payload ? { ...dish, cart: dish.cart - 1 } : dish
       );
+    case "RESET":
+      return (state = initialState);
     default:
       return state;
   }
