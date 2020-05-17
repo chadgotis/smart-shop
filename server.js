@@ -1,9 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
 require("dotenv").config();
 
 const dishes = require("./routes/api/Dishes");
+const auth = require("./routes/api/Auth");
 
 const uri = process.env.URI;
 mongoose
@@ -16,10 +16,11 @@ mongoose
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 // dishes route
 app.use("/api/dishes", dishes);
+app.use("/", auth);
 
 const PORT = process.env.PORT;
 
